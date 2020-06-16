@@ -11,6 +11,7 @@ public class ServerAApplication {
     public static void main(String[] args) {
         SpringApplication.run(ServerAApplication.class, args);
         System.out.println("feign被调用方服务启动...");
+        System.out.println("config客户端消费启动...");
     }
 
 }

@@ -1,5 +1,5 @@
 server:
-  port: 8043
+  port: 8045
 spring:
   application:
     name: service-zuul
@@ -12,11 +12,11 @@ eureka:
 zuul:
   routes:
     api-a:
-      serviceId: service-a
-      path: /api-a/**
+      serviceId: service-provider
+      path: /api/**
     api-b:
-      serviceId: service-b
-      path: /api-b/**
-    api-c:
-      serviceId: application-client
-      path: /rest/**
+      serviceId: server-c
+      path: /api-c/**
+#    api-c:
+#      serviceId: application-client
+#      path: /rest/**

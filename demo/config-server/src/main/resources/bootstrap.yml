@@ -1,0 +1,18 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8040/eureka
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          password: 1111
+          uri: https://github.com/panda-zhu/springcloud-demo-config.git
+          username: 2222
+  profiles:
+    active: dev
+server:
+  port: 8945

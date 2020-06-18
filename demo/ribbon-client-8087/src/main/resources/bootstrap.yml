@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: server-c
+  cloud:
+    config:
+      uri: http://localhost:8945/
+      profile: dev
+      label: master
+#      discovery:
+#        enabled: true                     #开启配置服务发现
+#        serviceId: config-server        #配置中心服务名
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8040/eureka
+server:
+  port: 8087
+
+service-provider-user:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
